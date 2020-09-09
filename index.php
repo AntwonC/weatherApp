@@ -4,7 +4,7 @@
   $error = ""; 
 
   if ( $_POST['location'] )  {
-    $urlContents =  file_get_contents("http://api.openweathermap.org/data/2.5/weather?q=" .$_POST['location']."&appid=edb0987f65930fcd131c1131887d66b5");
+    $urlContents =  file_get_contents("http://api.openweathermap.org/data/2.5/weather?q=" .$_POST['location']."&appid={api-key}");
 
     $weatherArray = json_decode($urlContents, true); 
 
